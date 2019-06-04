@@ -1,0 +1,53 @@
+{% extends 'main/index.html' %}
+
+{% block lang %}EN{% endblock %}
+
+{% block description %}Personal WebSite of Mariano Orozco Garcia (Ona309): creator of the Algoritmos podcast, photographer, web app developer, lover of artificial inteligence, bionic engineer, educator and co-funder of Fundación Kichihua.{% endblock %}
+
+{% block navitems %}
+    <li><a href="#Home" class="nav-offset">Home</a></li>
+    <li><a href="#About" class="nav-offset">About</a></li>
+    <li><a href="#Work" class="nav-offset">Work</a></li>
+    <li><a href="#Contact" class="nav-offset">Contact</a></li>
+    <li class="divider-vertical"></li>
+    <li><a href="{% url 'main:index' %}">Español</a></li>
+{% endblock %}
+
+{% block lead %}Photography  |  Software Engineering  |  Education{% endblock %}
+
+{% block about1 %}
+    <h2>About</h2>
+    <div class="col-sm-4">
+        <p>I am Mariano a web app, AI and Machine Learning developer who helps startups and individuals to enhance their brands through technology.</p>
+        <p>My interests include topics on machine learning and artificial intelligence (eg. neural networks, genetic algorithms & fuzzy logic), computer vision, object and pattern recognition (eg. biometrics), tutoring (math, sciences and programming) as well as game design.</p>
+    </div>
+{% endblock %}
+
+{% block about2 %}
+    <div class="col-sm-4">
+        <p>I’m an educator and entrepreneur that believes that <a target="_blank" href="https://ona309.com/Kichihua">"Creating is Learning"</a>, along with a friend I created a foundation to make this phrase a reality.</p>
+        <p>Beyond my studies and work, I am really passionate about board games, swimming, good stories and teaching. I have traveled to 15 other countries and at least half of the states in México where I had enjoyed nature, culture and took <a target="_blank" href="https://instagram.com/mariano_og">hundreds of photographs</a> from those experiences.</p>
+    </div>
+{% endblock %}
+
+{% block podcast %}
+    <h2>Podcast Algorithms</h2>
+    <div class="container">
+        <p>Algorithms analize our data, give us recommendations and take desitions for us, listen to <a target="_blank" href="https://ona309.com/Podcast">this podcast</a> (in spanish), to know how they work, along with the risks and advantages of using them.</p>
+    </div>
+    <p>If you liked it, share it on <a href="http://twitter.com/share?url=http://anchor.fm/algoritmos;text=I recommend you the algoritmos podcast via @Mariano_OG;size=l&amp;count=none" target="_blank">Twitter</a>.</p>
+{% endblock %}
+
+{% block work %}Work{% endblock %}
+
+{% block cat %}{{ category.nameEN }}{% endblock %}
+
+{% block exp %}{{ experience.nameEN }}{% endblock %}
+
+{% block desc %}{{ experience.descriptionEN }}{% endblock %}
+
+{% block skills %}Skills used for these projects:{% endblock %}
+
+{% block contact %}Let's stay in touch!{% endblock %}
+
+{% block signature %}Created by:{% endblock %}

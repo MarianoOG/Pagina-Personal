@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="{% block lang %}ES{% endblock %}">
+<head>
+
+    <!-- General Config -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Title and Content -->
+    <title>{% block title %}Mariano{% endblock %}</title>
+    <meta name="description" content="{% block description %}Sitio web personal de Mariano Orozco Garcia: creador del podcast Algoritmos, fotógrafo, desarrollador de software, amante de la inteligencia artificial, ingeniero en biónica, educador y co-fundador de Fundación Kichihua.{% endblock %}">
+    <meta name='copyright' content='CC BY-NC-SA 3.0'>
+    <meta name='owner' content='Mariano Orozco Garcia, contacto@marianoog.com'>
+    <meta name='designer' content='Mariano Orozco Garcia, contacto@marianoog.com'>
+    <meta name='url' content='http://www.marianoog.com'>
+
+    <!-- Load Bootstrap -->
+    <link rel="stylesheet" type='text/css' href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Megrim|Open+Sans|Oswald">
+
+    <!-- Load Files -->
+    {% load staticfiles %}
+    <link rel="stylesheet" type="text/css" href="{% static 'main/style.css' %}">
+    <link rel="shortcut icon" type="image/png" href="{% static 'main/images/favicon.ico' %}">
+    <link rel="icon" type="image/x-icon" href="{% static 'main/images/favicon.ico' %}">
+
+    <!-- Bootstrap core JavaScript and Custom JS -->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script type="text/javascript" src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="{% static 'main/script.js' %}"></script>
+
+</head>
+<body>
+
+    <!-- Nav Bar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+
+        <div class="container-fluid">
+
+            <!-- Header Compact -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#topNavBar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand brand" href="{% url 'main:index' %}">MOG</a>
+            </div>
+
+            <!-- Items -->
+            <div class="collapse navbar-collapse" id="topNavBar">
+                <ul class="nav navbar-nav navbar-right first">
+                    {% block navitems %}
+                        <li><a href="{% url 'main:index' %}#Home" class="nav-offset">Inicio</a></li>
+                        <li><a href="{% url 'main:index' %}#About" class="nav-offset">Sobre mi</a></li>
+                        <li><a href="{% url 'main:index' %}#Work" class="nav-offset">Proyectos</a></li>
+                        <li><a href="{% url 'main:index' %}#Contact" class="nav-offset">Contacto</a></li>
+                        <li class="divider-vertical"></li>
+                        <li><a href="{% url 'main:indexEN' %}">English</a></li>
+                    {% endblock %}
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+
+    <!-- First Impression -->
+    <div class="container-fluid" id="Home">
+        <div class="row">
+
+            <div class="col-lg-12">
+                <div class="intro-inner">
+
+                    <h1>Mariano Orozco Garcia</h1>
+                    <p class="lead">{% block lead %}Fotografía  |  Ingeniería de Software  |  Educación{% endblock %}</p>
+                    <hr>
+                    <ul class="list-inline first">
+                        <li><a href="https://ona309.com/Podcast" class="btn btn-primary btn-lg">
+                            <big>Podcast Algoritmos</big>
+                        </a></li>
+                    </ul>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- About -->
+    <div class="container" id="About">
+        <div class="row">
+
+            {% block about1 %}
+                <h2>Sobre Mí</h2>
+                <div class="col-sm-4">
+                    <p>Soy Mariano un desarrollador de aplicaciones web y de soluciones de inteligencia artificial que ayuda a startups y particulares a mejorar sus marcas por medio de la tecnología.</p>
+                    <p>Mis intereses incluyen temas como la inteligencia artificial y aprendizaje de máquina (eg. redes neuronales, algoritmos genéticos y lógica difusa), visión por computadora, reconocimiento de objetos y patrones (eg. biométrica), docencia (matemáticas, ciencias y programación) así como el diseño de juegos.</p>
+                </div>
+            {% endblock %}
+
+            <div class="col-xs-10 col-xs-offset-1 col-sm-4 col-sm-offset-0">
+                <div class="col-sm-10 col-sm-offset-1">
+                    <img src="{% static 'main/Images/photo.jpg' %}" class="img-circle img-responsive">
+                </div>
+            </div>
+
+            {% block about2 %}
+                <div class="col-sm-4">
+                    <p>Soy un educador y emprendedor que cree que <a target="_blank" target="_blank" href="https://ona309.com/Kichihua">"Aprender Es Crear"</a>, por lo que junto con amigo cree una fundación para convertir esa frase en una realidad.</p>
+                    <p>Más allá de mis estudios y trabajo, me apasionan los juegos de mesa, nadar, las buenas historias y enseñar. He viajado a 15 países y al menos a la mitad de los estados de México; he disfrutando su naturaleza, cultura y tomando <a target="_blank" href="https://instagram.com/mariano_og">cientos de fotos</a> de dichas experiencias.</p>
+                </div>
+            {% endblock %}
+
+        </div>
+    </div>
+
+    <div class="container-fluid" id="algoritmos">
+
+        <div class="row">
+            {% block podcast %}
+                <h2>Podcast Algoritmos</h2>
+                <div class="container">
+                    <p>Los algoritmos que analizan nuestros datos, nos hacen recomendaciones y toman decisiones automáticas por nosotros escucha <a target="_blank" href="https://ona309.com/Podcast">este podcast</a>, para saber sobre el funcionamiento, los riesgos y las ventajas que pueden derivar de su uso.</p>
+                    <p>Si te a gustado, compártelo en <a href="http://twitter.com/share?url=http://anchor.fm/algoritmos;text=Te recomiendo escuchar el #PodcastAlgoritmos en Spotify o Anchor via @Mariano_OG;size=l&amp;count=none" target="_blank">Twitter</a>.</p>
+                </div>
+            {% endblock %}
+            <div class="col-sm-offset-3 col-sm-6 col-md-offset-4 col-md-4">
+                <iframe src="https://anchor.fm/algoritmos/embed" frameborder="0" scrolling="no"></iframe>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Work -->
+    <div class="container" id="Work">
+        <h2>{% block work %}Proyectos{% endblock %}</h2>
+
+        {% for category in all_categories %}
+
+            <div class="row">
+                <h3>{% block cat %}{{ category }}{% endblock %}</h3>
+            </div>
+
+            <div class="row">
+                {% for experience in category.experience_set.all %}
+                    <div class="col-sm-6 col-md-3">
+                        <h4>{% block exp %}{{ experience }}{% endblock %}</h4>
+                        <a target="_blank" href="{{ experience.link }}">
+                            {% static "" as baseUrl %}
+                            <img src="{{ baseUrl }}main/Images/Experience/{{ experience.coverImageURL }}.png" alt="{{ experience.name }} cover" class="img-rounded img-responsive">
+                        </a>
+                        <p>{% block desc %}{{ experience.description }}{% endblock %}</p>
+                    </div>
+                {% endfor %}
+                {% cycle '' '' '' '' '' '<div class="clearfix visible-lg"></div>' %}
+            </div>
+
+            <h4>{% block skills %}Habilidades usadas para estos proyectos:{% endblock %}</h4>
+            <div class="row">
+                {% for skill in category.order_by_rank %}
+                <div class="col-sm-6">
+                    <div class="col-sm-8 col-sm-push-4">
+                        <span class="glyphicon glyphicon-star {% if skill.one %}active_star{% endif %}"></span>
+                        <span class="glyphicon glyphicon-star {% if skill.two %}active_star{% endif %}"></span>
+                        <span class="glyphicon glyphicon-star {% if skill.three %}active_star{% endif %}"></span>
+                        <span class="glyphicon glyphicon-star {% if skill.four %}active_star{% endif %}"></span>
+                        <span class="glyphicon glyphicon-star {% if skill.five %}active_star{% endif %}"></span>
+                    </div>
+                    <div class="col-sm-4 col-sm-pull-8">
+                        <p>{{ skill }}</p>
+                    </div>
+                </div>
+                {% endfor %}
+                {% cycle '' '' '' '' '' '<div class="clearfix visible-lg"></div>' %}
+            </div>
+
+        {% endfor %}
+        {% cycle '' '' '' '' '' '<div class="clearfix visible-lg"></div>' %}
+
+    </div>
+
+    <!-- Contact -->
+    <div class="container" id="Contact">
+        <h2>{% block contact %}¡Sigamos en contacto!{% endblock %}</h2>
+
+        <div class="row">
+
+            <div class="col-xs-4 col-md-2 col-md-offset-1">
+                <a target="_blank" href="https://twitter.com/Mariano_OG">
+                    <img src="{% static 'main/Images/Social/twitter.png' %}" alt="Mariano's Twitter Profile" class="img-circle img-responsive">
+                </a>
+            </div>
+
+            <div class="col-xs-4 col-md-2">
+                <a target="_blank" href="https://instagram.com/mariano_og">
+                    <img src="{% static 'main/Images/Social/instagram.png' %}" alt="Mariano's Instagram Profile" class="img-circle img-responsive">
+                </a>
+            </div>
+
+            <div class="col-xs-4 col-md-2">
+                <a target="_blank" href="https://ona309.com/Podcast">
+                    <img src="{% static 'main/Images/Social/anchor.png' %}" alt="Mariano's Podcast Algoritmos" class="img-circle img-responsive">
+                </a>
+            </div>
+
+            <div class="col-xs-4 col-md-2">
+                <a target="_blank" href="https://github.com/marianoog">
+                    <img src="{% static 'main/Images/Social/github.png' %}" alt="Mariano's Github Profile" class="img-circle img-responsive">
+                </a>
+            </div>
+
+            <div class="col-xs-4 col-xs-offset-2 col-md-2 col-md-offset-0">
+                <a target="_blank" href="https://www.linkedin.com/in/marianoog">
+                    <img src="{% static 'main/Images/Social/linkedin.png' %}" alt="Mariano's LinkedIn Profile" class="img-circle img-responsive">
+                </a>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>

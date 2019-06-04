@@ -1,0 +1,256 @@
+/**************************************************/
+/**                General format                **/
+/**************************************************/
+
+:root {
+    --blue1: #2272BC;
+    --blue2: #81D3F5;
+}
+
+body, html {
+  width: 100%;
+  height: 100%;
+  font-size: 100%;
+  font-family: 'Open Sans', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Oswald', serif;
+}
+
+h1 {
+  font-size: 5em;
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.6);
+}
+
+h2 { font-size: 3.5em; }
+
+p  { font-size: 1em;   }
+
+img { margin: auto; }
+
+.first { font-family: 'Oswald', sans-serif; }
+
+.brand { font-family: 'Oswald', monospace; }
+
+.divider-vertical {
+  height: 30px;
+  margin: 10px;
+  border-left: 1px solid #AAA;
+}
+
+/**************************************************/
+/**            Navigation bar style              **/
+/**************************************************/
+
+.navbar { border-radius: 0; }
+
+.nav > li > a {
+    font-size: 1em;
+}
+
+/**************************************************/
+/**                     Body                     **/
+/**************************************************/
+
+.container { text-align: center; }
+
+#Home {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    text-align: center;
+    color: #ffffff;
+    background: white url('Images/cover-background.jpg') no-repeat center center;
+    /*background: linear-gradient(to bottom right, dodgerblue, blue);*/
+    min-height: 100%;
+}
+
+hr {
+    width: 400px;
+    border-top: 1px solid #f2f2f2;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.intro-inner {
+    position: relative;
+    padding-top: 12%;
+    padding-bottom: 12%;
+}
+
+.intro-inner > p {
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.6);
+}
+
+ul.list-inline > li {
+    padding-top: 20px;
+}
+
+ul.list-inline > li > a {
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.6);
+}
+
+#About {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+#About > div > h2 {
+    padding-bottom: 75px;
+}
+
+#About > div {
+    padding-bottom: 50px;
+}
+
+#algoritmos {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    text-align: center;
+    color: #ffffff;
+    background: white url('Images/fractal.jpg') no-repeat center center;
+}
+
+#algoritmos > div > h2 {
+    padding-bottom: 15px;
+}
+
+#algoritmos > div > div > iframe {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    height: 150px;
+    width: 100%;
+}
+
+#Work {
+    padding-top: 30px;
+}
+
+#Work > div {
+    padding-bottom: 15px;
+}
+
+#Work > h4 {
+    padding-bottom: 10px;
+}
+
+#Work > div > div > a > img {
+    padding-top: 5px;
+    padding-bottom: 10px;
+}
+
+#Work > div > div > p {
+    padding-bottom: 15px;
+}
+
+.glyphicon-star{
+    color: #AAA;
+}
+
+.active_star {
+    color: var(--blue1);
+}
+
+#Contact {
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+#Contact > .row {
+    padding-top: 30px;
+}
+
+#Contact > div > div {
+    font-size: 1.3em;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.embed-responsive {
+    margin-bottom: 20px;
+}
+
+/**************************************************/
+/**              Footer bar style                **/
+/**************************************************/
+
+.footer {
+    padding-top: 15px;
+    background-color: #000000;
+    color: #ffffff;
+}
+
+.footer > div > a > img {
+    height: 120px;
+}
+
+/**************************************************/
+/**               OTher styles                   **/
+/**************************************************/
+
+/* For smaller devices */
+@media (max-width: 767px) {
+
+    h1 { font-size: 3em; }
+
+    h2 { font-size: 2em; }
+
+    hr { width: 100%;    }
+
+    .divider-vertical {
+      height: 0px;
+      margin: 15px;
+      border-left: 0px;
+      border-top: 1px solid #AAA;
+    }
+
+    .intro-inner {
+        padding-bottom: 10%;
+    }
+
+    #About {
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+
+    #About > div {
+      padding-bottom: 0px;
+    }
+
+    #About > div > h2 {
+      padding-bottom: 15px;
+    }
+
+    #About > div > div > div > img {
+      padding-top: 15px;
+      padding-bottom: 15px;
+    }
+
+    #algoritmos {
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+
+    #Work {
+      padding-top: 20px;
+    }
+
+    #Contact {
+        padding-top: 20px;
+    }
+
+    #Contact > .row {
+        padding-top: 10px;
+    }
+
+    #Contact > div > div {
+        font-size: 1em;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+
+    .footer > div > a > img {
+        height: 100px;
+    }
+
+}
